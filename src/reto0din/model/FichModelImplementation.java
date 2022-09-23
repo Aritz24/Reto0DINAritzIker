@@ -5,12 +5,8 @@
  */
 package reto0din.model;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ResourceBundle;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -25,7 +21,7 @@ public class FichModelImplementation implements Model{
      * 
      */
     public String getGreeting() {
-        String greeting = ResourceBundle.getBundle("reto0din.config")
+        String greeting = ResourceBundle.getBundle("reto0din1.config")
                 .getString("saludo");
        
            return greeting;    

@@ -21,10 +21,10 @@ public class Appliction {
         public static void main(String[] args) {
         // TODO code application logic here 
         
-        String tipo_dato = ResourceBundle.getBundle("reto0din.config")
+        String tipo_dato = ResourceBundle.getBundle("reto0din1.config")
                 .getString("tipo_dato");
         
-        String tipo_vista = ResourceBundle.getBundle("reto0din.config")
+        String tipo_vista = ResourceBundle.getBundle("reto0din1.config")
                 .getString("tipo_vista");
         
        ModelFactory modelo = new ModelFactory();
