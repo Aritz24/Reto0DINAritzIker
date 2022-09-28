@@ -5,11 +5,13 @@
  */
 package reto0din.model;
 
+import reto0din.excepciones.Exceptions;
+
 /**
  *
  * @author 2dam
  */
 public interface Model {
     
-    public String getGreeting();
+    public String getGreeting() throws Exceptions;
 }

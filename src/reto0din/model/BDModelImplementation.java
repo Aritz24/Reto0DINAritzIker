@@ -7,6 +7,7 @@ package reto0din.model;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
+import reto0din.excepciones.Exceptions;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -42,37 +43,36 @@ public class BDModelImplementation implements Model{
     }
     
     
-    public void openConnection (){
+    public void openConnection () throws Exceptions{
         try {
             con= (Connection) DriverManager.getConnection
         (urlBD, userBD, passwordBD);
         } catch (SQLException ex) {
-            Logger.getLogger(BDModelImplementation.class.getName())
-                    .log(Level.SEVERE, null, ex);
+            throw new Exceptions("Error"); 
         }
     }
     
-    public void closeConnection() {
+    public void closeConnection() throws Exceptions{
         if (stmt!= null) {
             try {
                 stmt.close();
             } catch (SQLException ex) {
-                Logger.getLogger(BDModelImplementation.class.getName())
-                        .log(Level.SEVERE, null, ex);
+                throw new Exceptions("Error");
             }
         }
         if (con!= null) {
             try {
                 con.close();
             } catch (SQLException ex) {
-                Logger.getLogger(BDModelImplementation.class.getName())
-                        .log(Level.SEVERE, null, ex);
+               throw new Exceptions("Error");
             }
         }
     }
     
-  @Override
-    public String getGreeting() {
+  
+    
+    @Override
+    public String getGreeting() throws Exceptions{
         ResultSet rs= null;
         String saludo = null;
         this.openConnection();
@@ -87,15 +87,13 @@ public class BDModelImplementation implements Model{
             }
            
         } catch (SQLException ex) {
-            Logger.getLogger(BDModelImplementation.class.getName())
-                            .log(Level.SEVERE, null, ex);
+            throw new Exceptions("Error");
         } finally{
             if (rs!= null) {
                 try {
                     rs.close();
                 } catch (SQLException ex) {
-                    Logger.getLogger(BDModelImplementation.class.getName())
-                            .log(Level.SEVERE, null, ex);
+                   throw new Exceptions("Error");
                 }
             }
                 this.closeConnection();

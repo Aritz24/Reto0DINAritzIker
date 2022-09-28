@@ -5,6 +5,7 @@
  */
 package reto0din1;
 
+import reto0din.excepciones.Exceptions;
 import java.util.ResourceBundle;
 import reto0din.model.Model;
 import reto0din.vista.View;
@@ -21,7 +22,7 @@ public class Controller{
      * @param model
      * @param view 
      */
-    public void Run(Model model, View view){
+    public void Run(Model model, View view) throws Exceptions{
         String dato;
         dato = model.getGreeting();
         view.showGreeting(dato);

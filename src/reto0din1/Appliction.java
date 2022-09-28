@@ -5,6 +5,7 @@
  */
 package reto0din1;
 
+import reto0din.excepciones.Exceptions;
 import java.util.ResourceBundle;
 import reto0din.model.ModelFactory;
 import reto0din.vista.ViewFactory;
@@ -18,7 +19,7 @@ public class Appliction {
     /**
      * @param args the command line arguments
      */
-        public static void main(String[] args) {
+        public static void main(String[] args) throws Exceptions {
         // TODO code application logic here 
         
         String tipo_dato = ResourceBundle.getBundle("reto0din1.config")
