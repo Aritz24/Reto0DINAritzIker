@@ -6,7 +6,7 @@
 package reto0din.vista;
 
 /**
- *
+ * Esta clase es la que muestra el mensaje en modo texto
  * @author 2dam
  */
 public class TextViewImplementation implements View{

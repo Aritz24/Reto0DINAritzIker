@@ -11,7 +11,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- *
+ * Esta es una clase de Testeo de Archivo
  * @author 2dam
  */
 public class FichModelImplementationTest {
@@ -27,6 +27,9 @@ public class FichModelImplementationTest {
     public void tearDown() {
     }
 
+    /**
+     * Este metodo comprueba que el saludo que recibe sea saludos usuario
+     */
     @Test
     public void testGetGreeting() {
         FichModelImplementation instance = new FichModelImplementation();

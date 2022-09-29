@@ -14,8 +14,9 @@ public class ModelFactory {
     /**
      * La factoría compara el string para determinar que tipo de objeto se 
      * quiere construir.
-     * @param v 
-     * @return 
+     * @param v Es una variable que guarda la forma en que queremos coger el dato
+     * @return Dependiendo de la opcion que se seleccione no devolvera una u 
+     * otra implementacion
      */
     public Model getModel(String v){
         

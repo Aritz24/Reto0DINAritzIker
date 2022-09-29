@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 
 
 /**
- *
+ * Esta es la clase que va a recoger el dato de nuestra BD.
  * @author 2dam
  */
 public class BDModelImplementation implements Model{
@@ -24,22 +24,10 @@ public class BDModelImplementation implements Model{
      *  Es la sentencia que se utilizará en la BD`para obtener el saludo
      */
     private final String ObtenerSaludo= "Select saludo from saludo";
-    
-    /**
-     * 
-     */
+ 
     private Connection con;
-    /**
-     * 
-     */
     private PreparedStatement stmt;
-    /**
-     * Es el string que usaremos para almacenar el driver de la BD
-     */
     private String driverBD;
-    /**
-     * Es el string en el que guardaremos el nombre del usuario de la BD
-     */
     private String urlBD;
     private String userBD;
     private String passwordBD;
@@ -95,11 +83,13 @@ public class BDModelImplementation implements Model{
     }
     
   
-    
-    @Override
     /**
-     * 
+     * El metodo ejecuta la sentencia sql que declaramos anteriormente para 
+     * sacar el dato a mostrar y lo guarda en una variable saludo
+     * @return saludo
+     * @throws reto0din.excepciones.Exceptions
      */
+    @Override
     public String getGreeting() throws Exceptions{
         ResultSet rs= null;
         String saludo = null;

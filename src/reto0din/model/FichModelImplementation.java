@@ -9,14 +9,16 @@ import java.util.ResourceBundle;
 
 
 /**
- *
+ * Esta es la clase que va a recoger el saludo de archivo de configuracion
  * @author 2dam
  */
 public class FichModelImplementation implements Model{
     
-
+/**
+ * El metodo recoge el saludo
+ * @return greeting
+ */
     @Override   
-   
     public String getGreeting() {
         String greeting = ResourceBundle.getBundle("reto0din1.config")
                 .getString("saludo");

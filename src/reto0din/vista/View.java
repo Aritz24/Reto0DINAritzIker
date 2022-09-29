@@ -6,7 +6,7 @@
 package reto0din.vista;
 
 /**
- *
+ * Esta es la clase de interfaz
  * @author 2dam
  */
 public interface View {

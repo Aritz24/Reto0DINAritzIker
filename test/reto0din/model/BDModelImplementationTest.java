@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 import reto0din.excepciones.Exceptions;
 
 /**
- *
+ * Esta es una clase de Testeo de BD
  * @author 2dam
  */
 public class BDModelImplementationTest {
@@ -34,6 +34,10 @@ public class BDModelImplementationTest {
         bd.closeConnection();
     }
 
+    /**
+     * Este metodo prueba que el resultado sea Saludos usuario
+     * @throws Exception 
+     */
     @Test
     public void testGetGreeting() throws Exception {
        

@@ -11,13 +11,15 @@ import reto0din.model.ModelFactory;
 import reto0din.vista.ViewFactory;
 
 /**
- *
+ * Esta es la clase de Aplicacion donde se ejecuta.
  * @author 2dam
  */
-public class Applicataion {
+public class Application {
 
     /**
-     * @param args the command line arguments
+     *  El metodo main guardamos de donde cogemos el dato y el tipo de vista que 
+     * usaremos para ejecutarlo
+     * Despues ejecutaremos el metodo Run de el objeto control
      */
         public static void main(String[] args) throws Exceptions {
         // TODO code application logic here 

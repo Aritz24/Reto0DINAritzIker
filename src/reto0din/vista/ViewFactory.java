@@ -6,7 +6,7 @@
 package reto0din.vista;
 
 /**
- *
+ * Esta es la clase que crea vistas
  * @author 2dam
  */
 public class ViewFactory {
@@ -14,9 +14,9 @@ public class ViewFactory {
     /**
      * La factoría compara el string para determinar que tipo de objeto se 
      * quiere construir.
-     * @author iker.
-     * @param v
-     * @return 
+     * @param v Es una variable que guarda la forma en que queremos mostrar el dato
+     * @return Dependiendo de la opcion que se seleccione no devolvera una u 
+     * otra implementacion
      */
     public View getView(String v){
         if(v.equalsIgnoreCase("Texto")){

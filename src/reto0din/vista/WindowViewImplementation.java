@@ -96,6 +96,10 @@ public class WindowViewImplementation extends javax.swing.JFrame implements View
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
+    /**
+     * El metodo nos muestra el saludo por ventana
+     * @param dato es un string con el saludo
+     */
     @Override
     public void showGreeting(String dato) {
         jLabel1.setText(dato);
