@@ -12,8 +12,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -21,16 +20,34 @@ import java.util.logging.Logger;
  */
 public class BDModelImplementation implements Model{
 
-    
+    /**
+     *  Es la sentencia que se utilizará en la BD`para obtener el saludo
+     */
     private final String ObtenerSaludo= "Select saludo from saludo";
     
+    /**
+     * 
+     */
     private Connection con;
+    /**
+     * 
+     */
     private PreparedStatement stmt;
+    /**
+     * Es el string que usaremos para almacenar el driver de la BD
+     */
     private String driverBD;
+    /**
+     * Es el string en el que guardaremos el nombre del usuario de la BD
+     */
     private String urlBD;
     private String userBD;
     private String passwordBD;
     
+    /**
+     * Damos los valores encontrados en el archivo de configuración a los
+     * strings driverBD, urlBD, userBD y passwdBD.
+     */
     public BDModelImplementation() {
         this.driverBD= ResourceBundle.getBundle("reto0din1.config")
                 .getString("driver");
@@ -43,6 +60,10 @@ public class BDModelImplementation implements Model{
     }
     
     
+    /**
+     * Con este método abrimos la conexión con la base de datos
+     * @throws Exceptions 
+     */
     public void openConnection () throws Exceptions{
         try {
             con= (Connection) DriverManager.getConnection
@@ -52,6 +73,10 @@ public class BDModelImplementation implements Model{
         }
     }
     
+    /**
+     * Con este método cerramos la conexión con la base de datos
+     * @throws Exceptions 
+     */
     public void closeConnection() throws Exceptions{
         if (stmt!= null) {
             try {
@@ -72,6 +97,9 @@ public class BDModelImplementation implements Model{
   
     
     @Override
+    /**
+     * 
+     */
     public String getGreeting() throws Exceptions{
         ResultSet rs= null;
         String saludo = null;

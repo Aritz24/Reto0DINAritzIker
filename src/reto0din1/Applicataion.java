@@ -14,7 +14,7 @@ import reto0din.vista.ViewFactory;
  *
  * @author 2dam
  */
-public class Appliction {
+public class Applicataion {
 
     /**
      * @param args the command line arguments

@@ -3,4 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+/**
+ * En este paquete se controlan las excepciones
+ */
 package reto0din.excepciones;

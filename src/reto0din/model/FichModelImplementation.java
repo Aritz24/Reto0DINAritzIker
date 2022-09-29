@@ -16,10 +16,7 @@ public class FichModelImplementation implements Model{
     
 
     @Override   
-    /**
-     * Recoge el saludo del archivo de configuración
-     * 
-     */
+   
     public String getGreeting() {
         String greeting = ResourceBundle.getBundle("reto0din1.config")
                 .getString("saludo");

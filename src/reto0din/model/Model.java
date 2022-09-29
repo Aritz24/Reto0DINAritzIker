@@ -8,10 +8,15 @@ package reto0din.model;
 import reto0din.excepciones.Exceptions;
 
 /**
- *
+ * Es la intefaz del modelo
  * @author 2dam
  */
 public interface Model {
     
+    /**
+     * Recogemos el saludo de donde esté guardado.
+     * @return Devuelve el saludo 
+     * @throws Exceptions 
+     */
     public String getGreeting() throws Exceptions;
 }

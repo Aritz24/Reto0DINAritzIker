@@ -6,7 +6,7 @@
 package reto0din.excepciones;
 
 /**
- *
+ * Es la Clase que controla las excepciones
  * @author 2dam
  */
 public class Exceptions extends Exception{

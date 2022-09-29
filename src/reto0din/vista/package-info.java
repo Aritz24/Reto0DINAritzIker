@@ -3,4 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+/**
+ * En este paquete se encuentran las clases pertenecientes a la vista de la 
+ * aplicación
+ */
 package reto0din.vista;

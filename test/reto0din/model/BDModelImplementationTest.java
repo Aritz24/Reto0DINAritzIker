@@ -5,53 +5,43 @@
  */
 package reto0din.model;
 
+import com.mysql.jdbc.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import reto0din.excepciones.Exceptions;
 
 /**
  *
  * @author 2dam
  */
 public class BDModelImplementationTest {
+    private final BDModelImplementation bd =new BDModelImplementation();
     
     public BDModelImplementationTest() {
     }
     
     @Before
-    public void setUp() {
+    public void setUp() throws Exceptions {
+       bd.openConnection();
     }
     
     @After
-    public void tearDown() {
+    public void tearDown() throws Exceptions {
+        bd.closeConnection();
     }
-
-    /*
-    @Test
-    public void testOpenConnection() throws Exception {
-        System.out.println("openConnection");
-        BDModelImplementation instance = new BDModelImplementation();
-        instance.openConnection();
-        fail("The test case is a prototype.");
-    }*/
-
-    /*
-    @Test
-    public void testCloseConnection() throws Exception {
-        System.out.println("closeConnection");
-        BDModelImplementation instance = new BDModelImplementation();
-        instance.closeConnection();
-        fail("The test case is a prototype.");
-    }
-*/
 
     @Test
     public void testGetGreeting() throws Exception {
-        BDModelImplementation instance = new BDModelImplementation();
-        String expResult = "saludos usuario";
-        String result = instance.getGreeting();
+       
+        String expResult = "Saludos usuario";
+        String result = bd.getGreeting();
         assertEquals(expResult, result);
     }
+    
+   
     
 }

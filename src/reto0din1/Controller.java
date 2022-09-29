@@ -19,7 +19,7 @@ public class Controller{
     /**
      * Recoge el saludo guardandolo en un String y lo manda para enseñarselo al
      * usuario.
-     * @param model
+     * @param model 
      * @param view 
      */
     public void Run(Model model, View view) throws Exceptions{

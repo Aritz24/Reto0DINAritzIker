@@ -6,7 +6,7 @@
 package reto0din.model;
 
 /**
- *
+ * Es la clase que crea modelos
  * @author 2dam
  */
 public class ModelFactory {
